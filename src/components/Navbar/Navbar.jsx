@@ -1,16 +1,16 @@
-import { NavbarContainer, NavbarWrapper } from "./Navbar.elements"
+import { NavbarButtons, NavbarContainer, NavbarWrapper } from "./Navbar.elements"
 
 function Navbar() {
   return (
       <NavbarContainer>
           <NavbarWrapper>
               <h1>LOGO</h1>
-              <ul>
-                  <li>HOME</li>
-                  <li>ACTIVITY</li>
-                  <li>FILMS</li>
-                  <li>LOGIN</li>
-              </ul>
+              <NavbarButtons>
+                    <li>HOME</li>
+                    <li>ACTIVITY</li>
+                    <li>FILMS</li>
+                    <li>LOGIN</li>
+              </NavbarButtons>
           </NavbarWrapper>
       </NavbarContainer>
   )
