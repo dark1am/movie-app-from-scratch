@@ -6,6 +6,7 @@ const Profile = lazy(()=>import("../pages/Profile/Profile"))
 const Search = lazy(()=>import("../pages/Search/Search"))
 const NotFound = lazy(()=>import("../pages/NotFound/NotFound"))
 const Login = lazy(()=>import('../pages/Login/Login'))
+const Register = lazy(()=>import('../pages/Register/Register'))
 
 function Routing() {
   return (
@@ -16,6 +17,7 @@ function Routing() {
                 <Route path="/profile" element={<Profile/>} />
                 <Route path="/search" element={<Search/>} />
                 <Route path="/login" element={<Login/>} />
+                <Route path="/register" element={<Register/>} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </Suspense>

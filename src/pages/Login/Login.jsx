@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Layout from "../../components/Layout/Layout"
 
 const Login = () => {
@@ -31,6 +31,8 @@ const Login = () => {
                 />
                 <button>LOGIN</button>
             </form>
+            <h1>Don't have an account yet? Register for free</h1>
+            <div><Link to="/register">here</Link></div>
         </Layout>
     )
 }
