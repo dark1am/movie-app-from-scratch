@@ -12,7 +12,6 @@ function Home() {
 
   const execute = async () => {
     await dispatch(loadMoviesAsync())
-    console.log(movies)
   }
 
   useEffect(()=>{

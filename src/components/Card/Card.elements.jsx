@@ -5,15 +5,20 @@ const CardUnit = styled.div`
     width: 10rem;
     border: 1px solid black;
     overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
 `
 
 const CardWrapper = styled.div`
-    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     padding-top: 2rem;
+    border: 1px solid black;
 `
 
 export {

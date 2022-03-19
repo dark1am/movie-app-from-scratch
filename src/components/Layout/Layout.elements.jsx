@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 export const Body = styled.div`
     width:100%;
-    height: 80px;
+    height: 100%;
     position: sticky;
     top: 0;
     z-index: 99;
-    background-color: white;
 `
 
 export const BodyWrapper = styled.div`
