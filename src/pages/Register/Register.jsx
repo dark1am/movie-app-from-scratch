@@ -1,28 +1,20 @@
 import { useState } from "react"
 import Layout from "../../components/Layout/Layout"
-import {getAuth,createUserWithEmailAndPassword} from 'firebase/auth'
-import firebaseApp from "../../firebase/credentials"
 import { useNavigate } from "react-router-dom"
+import { register } from "../../firebase/utils/register"
 
 const Register = () => {
 
     const navigate = useNavigate()
-    const auth = getAuth(firebaseApp)
-
     const [userName, setUserName]=useState(null)
     const [email, setEmail]=useState(null)
     const [password, setPassword]=useState(null)
 
-    const register = async (email, password) => {
-       await createUserWithEmailAndPassword(auth, email, password)
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(userName,email,password)
-        register(email,password)
-        .then(res => navigate('/'))
-        /* navigate('/') */
+        register(userName,email,password)
+        .then(() => navigate('/'))
     }
 
     return(
