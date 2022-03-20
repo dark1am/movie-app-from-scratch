@@ -14,6 +14,11 @@ const Register = () => {
         e.preventDefault()
         console.log(userName,email,password)
         register(userName,email,password)
+        .then(()=>{
+            setUserName(null)
+            setEmail(null)
+            setPassword(null)
+        })
         .then(() => navigate('/'))
     }
 

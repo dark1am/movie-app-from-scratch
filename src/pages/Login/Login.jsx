@@ -1,19 +1,23 @@
 import {useState} from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import Layout from "../../components/Layout/Layout"
+import { login } from '../../firebase/utils/login'
 
 const Login = () => {
 
     const navigate = useNavigate()
-    const [user, setUser] = useState('')
-    const [password, setPassword] = useState('')
+    const [user, setUser] = useState(null)
+    const [password, setPassword] = useState(null)
 
     const handleSubmit = (e) => {
 
         e.preventDefault()
-        console.log(user, password)
-
-        navigate('/')
+        login(user, password)
+        .then(()=> {
+            setUser(null)
+            setPassword(null)
+        })
+        .then(()=> navigate('/'))
     }
 
     return(
